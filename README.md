@@ -17,6 +17,6 @@
 * [X] 숫자는 중복되지 않는다.
 
 **Numbers**
-* [ ] 다른 수 -> nothing
-* [ ] 같은 수 다른 자리 -> ball
-* [ ] 같은 수 같은 자리 -> strike
+* [X] 다른 수 -> nothing
+* [X] 같은 수 다른 자리 -> ball
+* [X] 같은 수 같은 자리 -> strike

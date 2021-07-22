@@ -6,7 +6,30 @@ import (
 )
 
 type Game struct {
-	Quiz string
+	numbers []string
+}
+
+type Score struct {
+	strike int
+	ball   int
+}
+
+func (g *Game) compare(s string) Score {
+	score := Score{}
+	targetSlice := strings.Split(s, NumberSeparator)
+
+	for i, source := range g.numbers {
+		for k, target := range targetSlice {
+			if source == target {
+				if i == k {
+					score.strike++
+					continue
+				}
+				score.ball++
+			}
+		}
+	}
+	return score
 }
 
 const (
@@ -32,7 +55,7 @@ func NewGame(s string) (*Game, error) {
 		}
 		used[v] = struct{}{}
 	}
-	return &Game{s}, nil
+	return &Game{numbers}, nil
 }
 
 func invalidLength(numbers []string) bool {
