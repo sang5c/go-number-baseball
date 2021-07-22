@@ -21,6 +21,11 @@ func TestInvalidLength(t *testing.T) {
 	assertError(t, "1234")
 }
 
+func TestDuplicated(t *testing.T) {
+	assertError(t, "112")
+	assertError(t, "122")
+}
+
 func assertError(t *testing.T, s string) {
 	game, err := NewGame(s)
 	assert.Nil(t, game)

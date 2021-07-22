@@ -21,10 +21,16 @@ func NewGame(s string) (*Game, error) {
 	if invalidLength(numbers) {
 		return nil, fmt.Errorf("invalid length: %s", numbers)
 	}
+
+	used := make(map[string]struct{})
 	for _, v := range numbers {
 		if numberOutOfRange(v) {
 			return nil, fmt.Errorf("invalid numbers: %s", numbers)
 		}
+		if _, ok := used[v]; ok {
+			return nil, fmt.Errorf("duplicated numbers: %s", numbers)
+		}
+		used[v] = struct{}{}
 	}
 	return &Game{s}, nil
 }
