@@ -1,18 +1,18 @@
-package main
+package baseball
 
 import (
-	"baseball/number"
-	"baseball/score"
+	number2 "baseball/baseball/number"
+	score2 "baseball/baseball/score"
 	"strings"
 )
 
 type Game struct {
-	numbers number.Numbers
+	numbers number2.Numbers
 }
 
-func (g *Game) compare(s string) score.Score {
-	sc := score.Score{}
-	targetSlice := strings.Split(s, number.Separator)
+func (g *Game) compare(s string) score2.Score {
+	sc := score2.Score{}
+	targetSlice := strings.Split(s, number2.Separator)
 
 	for index, value := range targetSlice {
 		result := g.numbers.Contains(value, index)
@@ -22,7 +22,7 @@ func (g *Game) compare(s string) score.Score {
 }
 
 func NewGame(s string) (*Game, error) {
-	numbers, err := number.NewNumbers(s)
+	numbers, err := number2.NewNumbers(s)
 	if err != nil {
 		return nil, err
 	}

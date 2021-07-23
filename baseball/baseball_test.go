@@ -1,7 +1,7 @@
-package main
+package baseball
 
 import (
-	"baseball/score"
+	score2 "baseball/baseball/score"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -49,5 +49,5 @@ func TestStrike(t *testing.T) {
 
 func assertEqual(t *testing.T, input string, strike int, ball int) {
 	result := game.compare(input)
-	assert.Equal(t, score.New(strike, ball), result)
+	assert.Equal(t, score2.New(strike, ball), result)
 }

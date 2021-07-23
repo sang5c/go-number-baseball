@@ -1,7 +1,7 @@
 package score
 
 import (
-	"baseball/number"
+	number2 "baseball/baseball/number"
 )
 
 type Score struct {
@@ -9,7 +9,7 @@ type Score struct {
 	ball   int
 }
 
-func (s *Score) Add(d number.Decision) {
+func (s *Score) Add(d number2.Decision) {
 	if d.IsStrike() {
 		s.strike++
 	} else if d.IsBall() {
