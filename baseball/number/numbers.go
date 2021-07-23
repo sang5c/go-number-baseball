@@ -19,7 +19,7 @@ func (numbers Numbers) Contains(target string, position int) Decision {
 			return result
 		}
 	}
-	return nothing
+	return Nothing
 }
 
 func NewNumbers(str string) (Numbers, error) {

@@ -1,17 +1,19 @@
 package number
 
-type Decision string
+type Decision struct {
+	result string
+}
 
 func (d Decision) IsStrike() bool {
-	return d == "strike"
+	return d.result == "Strike"
 }
 
 func (d Decision) IsBall() bool {
-	return d == "ball"
+	return d.result == "Ball"
 }
 
-const (
-	nothing = Decision("nothing")
-	ball    = Decision("ball")
-	strike  = Decision("strike")
+var (
+	Nothing = Decision{"Nothing"}
+	Ball    = Decision{"Ball"}
+	Strike  = Decision{"Strike"}
 )

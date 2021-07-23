@@ -33,15 +33,15 @@ func NewNumber(s string, position int) (Number, error) {
 
 func (n Number) compare(target Number) Decision {
 	if isStrike(target, n) {
-		return strike
+		return Strike
 	} else if isBall(target, n) {
-		return ball
+		return Ball
 	}
-	return nothing
+	return Nothing
 }
 
 func isBallOrStrike(result Decision) bool {
-	return result != nothing
+	return result != Nothing
 }
 
 func isBall(target Number, n Number) bool {
