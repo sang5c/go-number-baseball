@@ -10,10 +10,9 @@ type Score struct {
 }
 
 func (s *Score) Add(d number.Decision) {
-	result := d.GetResult()
-	if result == "strike" {
+	if d.IsStrike() {
 		s.strike++
-	} else if result == "ball" {
+	} else if d.IsBall() {
 		s.ball++
 	}
 }

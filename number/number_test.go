@@ -16,7 +16,7 @@ func TestCompareBall(t *testing.T) {
 	target, _ := NewNumber("1", 1)
 	result := source.compare(target)
 
-	assert.Equal(t, Decision{"ball"}, result)
+	assert.Equal(t, ball, result)
 }
 
 func TestCompareStrike(t *testing.T) {
@@ -24,5 +24,5 @@ func TestCompareStrike(t *testing.T) {
 	target, _ := NewNumber("1", 0)
 	result := source.compare(target)
 
-	assert.Equal(t, Decision{"strike"}, result)
+	assert.Equal(t, strike, result)
 }
