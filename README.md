@@ -1,7 +1,10 @@
 # number-baseball
-숫자 야구 게임을 TDD + Golang 으로 구현
-최범균님의 [고랭(golang) 기초 연습 - 야구게임 01
-](https://www.youtube.com/watch?v=Co2yAUJlm0c) 영상을 보고 작성했습니다.
+숫자 야구 게임을 TDD + Golang 으로 구현, go code 작성법을 고민하는 실험실입니다.
+
+시작은 최범균님의 [고랭(golang) 기초 연습 - 야구게임 01
+](https://www.youtube.com/watch?v=Co2yAUJlm0c) 영상을 보고 작성했습니다. 만..  
+이전에 해본 TDD 과제를 흉내내어 극단적인 코드 구현을 추가해봤습니다. 
+
 
 ## 규칙
 - 문제와 답 모두 숫자 세개 입력
@@ -20,3 +23,9 @@
 * [X] 다른 수 -> nothing
 * [X] 같은 수 다른 자리 -> ball
 * [X] 같은 수 같은 자리 -> strike
+
+**Number**
+* [X] 객체는 값과 포지션을 갖는다.
+* [X] 값과 포지션이 같으면 스트라이크를 반환한다.
+* [X] 값이 같고 포지션이 다르면 볼을 반환한다.
+* [X] 값과 포지션이 다르면 낫싱을 반환한다.
